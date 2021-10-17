@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# I-Ortho Specialized Hospital
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project Live Link: [My Site Live Link](https://stupefied-perlman-d15da1.netlify.app/).
 
-## Available Scripts
+## Project Details:
 
-In the project directory, you can run:
+Here is my project Details:
 
-### `npm start`
+:arrow_right: It is a Orthopedic specialized hospital Where you will get various type of service from different doctor and nurse.  <br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+:arrow_right: Our orthopedic service offers consultation, inpatient management and outpatient treatment for patients with disorders of the musculoskeletal system. Our doctors are international leaders in minimally invasive and bone conserving techniques.Sports injuries or Sports medicine are treated with state-of-the art equipment and highly skilled experts in the field.  <br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+:arrow_right: Here you can check service details for more information and get a better idea about our doctors and service providers.<br/>
 
-### `npm test`
+:arrow_right: Here you will get a option to find physician for your problems. <br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:arrow_right: We sell various orthopedic products and medicine.You will get it in shop pages. <br/>
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:arrow_right: Here i have used bootstrap5,reactjs,Javascript,html5,css3

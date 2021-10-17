@@ -1,0 +1,82 @@
+[
+  {
+    "id": "616c56fca75da1e03e823a4a",
+    "isActive": true,
+    "price": 2615.08,
+    "picture": "https://i.ibb.co/1RF68N4/knee.jpg",
+    "name": "Knee Joint Operation",
+    "about": "Surgery is sometimes needed to repair and stabilize the patella, or kneecap, after a fracture. Orthopedic surgeons at NYU Langone have the expertise to determine when surgery is the best option to restore knee function and which surgical technique is most appropriate.\r\n"
+  },
+  {
+    "id": "616c56fc6212f9bc1b70df39",
+    "isActive": true,
+    "price": 2497.92,
+    "picture": "https://i.ibb.co/4FYN4Ns/hip.jpg",
+    "name": "Hip Special Care",
+    "about": "A common surgical procedure, hip replacements are often performed as a result of either rheumatoid arthritis or wear-and-tear caused predominantly by age. The surgery consists of the removal of the existing ball-and-socket hip joint and replacing it with an artificial one. A hip replacement can also be necessary in the event of a fractured hip, as the joint is fragile and once damaged it can be difficult for the joint to heal.\r\n"
+  },
+  {
+    "id": "616c56fc059c5d1782263a7d",
+    "isActive": true,
+    "price": 3274.76,
+    "picture": "https://i.ibb.co/mvjb4JM/CREATOR-gd-jpeg-v1-0-using-IJG-JPEG-v62-quality-82.jpg",
+    "name": "Spinal Joint Surgery",
+    "about": "The orthopedic surgeons with specialization in spine surgery treat patients of all ages who suffer from the problems of the spine, in cooperation with the rehabilitation and  pain management specialists, as well as they manage all spine cases, such as fractures of the spine, disc prolapse , inflammation of the vertebrae and deformities of all types, using latest means of modern medicine in this area.\r\n"
+  },
+  {
+    "id": "616c56fc0e73d2685c42cd29",
+    "isActive": true,
+    "price": 1529.39,
+    "picture": "https://i.ibb.co/D5JrGy4/therapy.jpg",
+    "name": "Home Therapy",
+    "about": "we will discuss physical therapy quotes motivational and inspirational. Medicines and surgery are not adequate to cure many problems such as injuries, deformities, joint pain, and muscle pain. In such cases, physical therapy can be useful to cure your problem.\r\n"
+  },
+  {
+    "id": "616c56fcc4e2275f237ed82e",
+    "isActive": true,
+    "price": 3385.68,
+    "picture": "https://i.ibb.co/pz699JN/CREATOR-gd-jpeg-v1-0-using-IJG-JPEG-v62-quality-82.jpg",
+    "name": "Knee Joint Replacement",
+    "about": "Knee replacement, also known as knee arthroplasty, is a surgical procedure to replace the weight-bearing surfaces of the knee joint to relieve pain and disability. It is most commonly performed for osteoarthritis, and also for other knee diseases such as rheumatoid arthritis and psoriatic arthritis.\r\n"
+  },
+  {
+    "id": "616c56fce276c2b77ae568cc",
+    "isActive": true,
+    "price": 1558.35,
+    "picture": "https://i.ibb.co/4FYN4Ns/hip.jpg",
+    "name": "Hip Special Care",
+    "about": "Hip Replacement, also known as hip arthroplasty, is a surgical procedure in which damaged parts of the hip are replaced with artificial parts. In this surgery, the patient will undergo spinal or general anesthesia. The doctor will make an incision near the hip, remove the damaged or diseased areas of the hip, and replace these parts with prosthetic implants. This procedure is generally performed on patients that have arthritis that causes hip pain.\r\n"
+  },
+  {
+    "id": "616c56fc280b633bd4be469b",
+    "isActive": false,
+    "price": 3883.26,
+    "picture": "https://i.ibb.co/Rymmnw6/sports.jpg",
+    "name": "sports medicine",
+    "about": "Sports Medicine Institute boasts a team of physicians and sports specialists dedicated to treating athletic injuries of the musculoskeletal system, with a special focus on shoulder, elbow, hip, knee and foot and ankle injuries. We field more than 95,000 patient visits each year and perform more than 10,000 surgeries. We have trained more than 100 of the sports medicine leaders at institutions all over the world and our physicians serve as team physicians for over 30 professional sports teams.\r\n"
+  },
+  {
+    "id": "616c56fc7a6dd90f5f522879",
+    "isActive": true,
+    "price": 3880.76,
+    "picture": "https://i.ibb.co/37vhrGv/hand.jpg",
+    "name": "Hand & Wirst Pain",
+    "about": "Pain in your hands or wrists can affect almost everything you do. Even if you don’t work with your hands for a living, you still rely on them for just about everything you do in your daily life.There are a surprisingly large number of bones, tendons, ligaments, and muscles packed into these small appendages.\r\n"
+  },
+  {
+    "id": "616c56fc91bf22f6249057bc",
+    "isActive": true,
+    "price": 1534.39,
+    "picture": "https://i.ibb.co/qJdt3LH/foot-Ankel.jpg",
+    "name": "Ankel & Feet Pain",
+    "about": "Degenerative arthritis, or osteoarthritis, can develop in the foot and ankle joints as repetitive stress causes their protective cartilage coating to break down and wear away. Cartilage covers the bone surfaces in a joint, allowing the bones to glide smoothly together during movement. As the cartilage in a joint deteriorates, the bones may begin to rub together, leading to pain and inflammation.\r\n"
+  },
+  {
+    "id": "616c56fce59fe0e3f1041e85",
+    "isActive": true,
+    "price": 1799.95,
+    "picture": "https://i.ibb.co/Rppx46z/elbow.jpg",
+    "name": "Elbow joint operation",
+    "about": "Elbow Surgery is a surgical procedure used to treat problems of the elbow and surrounding tissue. In elbow surgery, the patient will be placed under regional or general anesthesia. The doctor will make a small incision into the elbow area, insert a small camera known as an arthroscope, view different parts of the elbow using the scope, and perform correctional procedures.\r\n"
+  }
+]
