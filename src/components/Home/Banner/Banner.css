@@ -1,0 +1,14 @@
+.banner-content {
+  height: 450px;
+}
+.banner-content h3 {
+  color: #01d6a3;
+  text-transform: uppercase;
+  font-size: 70px;
+  text-shadow: #a5d6cb;
+}
+.banner-content p,
+h3 {
+  color: #01d6a3;
+  text-transform: uppercase;
+}

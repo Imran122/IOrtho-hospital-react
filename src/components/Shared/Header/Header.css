@@ -1,0 +1,32 @@
+.navbar-address {
+  font-family: "Poppins", sans-serif;
+  background-color: #033b4a;
+  color: #ffff;
+  font-size: 12px;
+}
+
+.appoinment {
+  background-color: #01d6a3;
+}
+.brand-img {
+  height: 40px;
+}
+.search-btn {
+  background-color: #01d6a3;
+  border: 2px solid #01d6a3;
+}
+.search-btn:hover {
+  background-color: white;
+  color: #01d6a3;
+  border: 2px solid #01d6a3;
+}
+.navbar-list {
+  color: #343a40;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar-list:hover {
+  color: #01d6a3;
+}

@@ -1,0 +1,23 @@
+.doctor-details {
+  margin-top: 30px;
+}
+.doctor-content {
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+.doctor-content h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font: size 40px;
+  color: #01d6a3;
+}
+.doctor-content p {
+}
+.btn-doctor {
+  margin-left: 20px;
+  background-color: #064d3c;
+}
+.btn-doctor:hover {
+  background-color: #01d6a3;
+  border: 1px solid #01d6a3;
+}

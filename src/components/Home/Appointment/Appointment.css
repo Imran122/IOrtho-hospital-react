@@ -1,0 +1,32 @@
+.patients-feedback {
+  background-image: url("../../../images/celebration.jpg");
+  background: linear-gradient(to top, #033642, #07fa9dcc),
+    url("../../../images/celebration.jpg") no-repeat top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback-content {
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback-content h6 {
+  color: #ffff;
+}
+.feedback-text {
+  color: #ffff;
+  font-weight: normal;
+}
