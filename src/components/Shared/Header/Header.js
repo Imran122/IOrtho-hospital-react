@@ -25,9 +25,9 @@ const Header = () => {
                 </Container>
             </div>
             {/*  navbar part with options*/}
-            <div>
+            <div className="sticky-top">
 
-                <Navbar sticky="top" bg="light" expand="lg" className="w-75 mx-auto" >
+                <Navbar bg="light" expand="lg" className="w-75 mx-auto" >
                     <Container fluid >
                         <Navbar.Brand href="#">
                             <img src={img} className="brand-img" alt="" />
@@ -41,7 +41,7 @@ const Header = () => {
                             >
                                 <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/home">Home</NavLink></Nav.Link>
 
-                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/services">Services</NavLink></Nav.Link>
+                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/ourservices">Services</NavLink></Nav.Link>
                                 <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/article">Article</NavLink></Nav.Link>
                                 <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/shop">Shop</NavLink></Nav.Link>
 

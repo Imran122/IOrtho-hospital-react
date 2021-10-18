@@ -1,0 +1,17 @@
+.details-service {
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to top, #dfeef1, #94f5d0cc);
+}
+
+.service-details-Img {
+  height: 350px;
+}
+.service-content {
+  text-align: center;
+}
+.description {
+  text-align: center;
+}

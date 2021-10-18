@@ -1,0 +1,14 @@
+.shop-button:hover {
+  background-color: #01d6a3;
+  border: 1px solid #01d6a3;
+}
+.shop-data {
+  height: 400px;
+  border: 1px solid #01d6a3;
+
+  text-align: center;
+}
+.shop-data h4,
+h6 {
+  color: #01d6a3;
+}

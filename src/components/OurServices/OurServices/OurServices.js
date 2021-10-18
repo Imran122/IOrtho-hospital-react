@@ -1,11 +1,9 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import useService from '../../../hooks/useService';
-import Service from '../Service/Service';
-import './Services.css'
-const Services = () => {
+import OurService from '../OurService/OurService';
+import { Col, Container, Row } from 'react-bootstrap';
+const OurServices = () => {
     const [services, setServices] = useService()
-    const servicesItems = services.slice(0, 6)
     return (
         <div>
             <Container className="categories">
@@ -19,8 +17,8 @@ const Services = () => {
                 <Row xs={1} md={3} className="g-2">
 
                     {
-                        servicesItems.map(service => <Col key={service.id}>
-                            <Service service={service}></Service>
+                        services.map(service => <Col key={service.id}>
+                            <OurService service={service}></OurService>
                         </Col>)
                     }
 
@@ -30,4 +28,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default OurServices;

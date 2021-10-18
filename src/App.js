@@ -11,6 +11,9 @@ import Home from './components/Home/Home/Home';
 import Article from './components/Article/Article';
 import Header from './components/Shared/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
+import ServiceDetails from './components/Home/ServiceDetails/ServiceDetails';
+import OurServices from './components/OurServices/OurServices/OurServices';
+import Shop from './components/Shop/Shop';
 
 function App() {
   return (
@@ -24,8 +27,17 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <Route path="/ourservices">
+            <OurServices></OurServices>
+          </Route>
+          <Route exact path="/servicedetails/:serviceid">
+            <ServiceDetails></ServiceDetails>
+          </Route>
           <Route path="/article">
             <Article></Article>
+          </Route>
+          <Route path="/shop">
+            <Shop></Shop>
           </Route>
 
         </Switch>

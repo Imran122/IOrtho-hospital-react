@@ -11,10 +11,10 @@ const Appointment = () => {
                         <Row>
                             <h6>Happy Patients</h6>
                             <h3>What Our Patients Are Saying</h3>
-                            <Col xs={6} md={12}>
+                            <Col sm={6} md={12}>
                                 <Image src={img} roundedCircle />
                             </Col>
-                            <Col xs={6} md={12}>
+                            <Col sm={6} md={12}>
                                 <blockquote className="feedback-text">Great co workers, really good environment and excellent patient care. They are continuously innovating themselves which is why they remain a premier dental clinic.This was the cleanest medical establishment I've ever been in. They just loved the welcoming and warm atmosphere in there.</blockquote>
                             </Col>
                         </Row>

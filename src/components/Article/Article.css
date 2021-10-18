@@ -1,0 +1,12 @@
+.stretched-link {
+  text-decoration: none;
+  color: #01d6a3;
+}
+.article-images:hover {
+  border: 5px solid #01d6a3;
+  background-color: #008cba;
+  transition: 0.5s ease;
+}
+.article-content {
+  height: 350px;
+}

@@ -1,0 +1,26 @@
+.card-img {
+  width: 100px;
+}
+.card {
+  text-align: center;
+  height: 450px;
+}
+
+.main-card-content {
+  width: 300px;
+  height: 700px;
+  margin-bottom: 15px;
+}
+.card-title {
+  color: rgb(15, 230, 129);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.card-body {
+  text-align: justify;
+}
+.card-body h5 {
+  color: rgb(15, 230, 129);
+  text-transform: uppercase;
+  font-weight: bold;
+}
