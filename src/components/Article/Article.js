@@ -21,9 +21,7 @@ const Article = () => {
                         <div className="col-auto d-none d-lg-block">
 
                             <img className="article-images h-100" width="200" height="250" src={article1} alt="" />
-                            <div class="overlay">
-                                <div class="text">Hello World</div>
-                            </div>
+
                         </div>
 
                     </div>

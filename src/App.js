@@ -14,6 +14,9 @@ import Footer from './components/Shared/Footer/Footer';
 import ServiceDetails from './components/Home/ServiceDetails/ServiceDetails';
 import OurServices from './components/OurServices/OurServices/OurServices';
 import Shop from './components/Shop/Shop';
+import NotFound from './components/NotFound/NotFound';
+import Registration from './components/Authentications/Registration/Registration';
+import LogIn from './components/Authentications/LogIn/LogIn';
 
 function App() {
   return (
@@ -39,7 +42,15 @@ function App() {
           <Route path="/shop">
             <Shop></Shop>
           </Route>
-
+          <Route path="/registration">
+            <Registration></Registration>
+          </Route>
+          <Route path="/login">
+            <LogIn></LogIn>
+          </Route>
+          <Route exact={true} path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
         <Footer></Footer>
       </Router>

@@ -1,9 +1,16 @@
 import React from 'react';
-import { Button, Col, Container, Form, FormControl, Nav, Navbar, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, FormControl, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
 import './Header.css'
 import img from '../../../images/logo/logo.png'
 import { NavLink, BrowserRouter as Router, } from 'react-router-dom';
+import useFirebase from '../../../hooks/useFirebase';
 const Header = () => {
+    //shoing loggedin user information
+    const { user, logout } = useFirebase();
+
+
+
+
     //style active nav 
     const activeStyle = {
         fontWeight: "bold",
@@ -42,8 +49,29 @@ const Header = () => {
                                 <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/home">Home</NavLink></Nav.Link>
 
                                 <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/ourservices">Services</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/article">Article</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/shop">Shop</NavLink></Nav.Link>
+                                <Nav.Link> </Nav.Link>
+
+
+                                <NavDropdown className="navbar-list" title="Pages" id="navbarScrollingDropdown">
+                                    <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/shop">Shop</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink className="navbar-list" activeStyle={activeStyle} to="/article">Article</NavLink></NavDropdown.Item>
+
+                                </NavDropdown>
+
+
+                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/login">LogIn</NavLink></Nav.Link>
+                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/registration">SignUp</NavLink></Nav.Link>
+
+                                {user?.email &&
+                                    <div className="log-data d-flex align-items-center mx-2">
+                                        <div>
+                                            <img className="login-img rounded-circle" width="50" height="50" src={user.photoURL} alt="" />
+
+                                        </div>
+                                        <h6>{user.displayName}</h6>
+
+                                        <Button onClick={logout}>logOut</Button>
+                                    </div>}
 
 
 
@@ -59,6 +87,8 @@ const Header = () => {
                                 <Button className="search-btn">Search</Button>
                             </Form>
                         </Navbar.Collapse>
+
+
                     </Container>
                 </Navbar>
 

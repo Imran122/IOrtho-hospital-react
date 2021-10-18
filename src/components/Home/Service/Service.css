@@ -24,3 +24,6 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+.card-footer {
+  background-color: #d8f7f0;
+}

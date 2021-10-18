@@ -1,0 +1,16 @@
+.signup-image {
+  margin-left: 0;
+}
+.card-signup-main {
+  height: 100%;
+  margin-left: 0;
+}
+.register-button {
+  height: 60px;
+  margin-left: 5px;
+}
+
+.register-button:hover {
+  background-color: #01d6a3;
+  border: 1px solid #01d6a3;
+}
