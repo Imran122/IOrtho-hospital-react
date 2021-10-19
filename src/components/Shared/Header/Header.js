@@ -79,7 +79,7 @@ const Header = () => {
                                         </div>
                                         :
                                         <>
-                                            <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/login">LogIn</NavLink></Nav.Link>
+
                                             <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/registration">SignUp</NavLink></Nav.Link>
                                         </>
                                 }

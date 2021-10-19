@@ -35,7 +35,7 @@ const Registration = () => {
         signUsingGoogle()
             .then(result => {
                 history.push(redirect_uri)
-                window.location.reload(redirect_uri)
+
 
             })
 

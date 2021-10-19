@@ -16,7 +16,7 @@ import OurServices from './components/OurServices/OurServices/OurServices';
 import Shop from './components/Shop/Shop';
 import NotFound from './components/NotFound/NotFound';
 import Registration from './components/Authentications/Registration/Registration';
-import LogIn from './components/Authentications/LogIn/LogIn';
+
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
@@ -51,9 +51,7 @@ function App() {
             <Route path="/registration">
               <Registration></Registration>
             </Route>
-            <Route path="/login">
-              <LogIn></LogIn>
-            </Route>
+
             <Route exact={true} path="*">
               <NotFound></NotFound>
             </Route>

@@ -63,18 +63,22 @@ const useEmailAuth = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
 
+                setUser(user)
                 setError('');
                 history.push(redirect_uri)
-                location.reload();
+                location.reload(redirect_uri);
             })
             .catch(error => {
                 setError(error.message);
             })
     }
 
-
+    //profile update code
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => { })
+    }
     //create new user
 
     const createNewUser = (email, password) => {
@@ -83,10 +87,10 @@ const useEmailAuth = () => {
                 // Signed up 
                 setUser(result.user);
                 setUserName();
-                console.log(result.user);
+
                 setError('');
                 history.push(redirect_uri)
-                location.reload();
+                location.reload(redirect_uri);
 
             })
             .catch((err) => {
@@ -94,11 +98,7 @@ const useEmailAuth = () => {
             })
 
     }
-    //profile update code
-    const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-            .then(result => { })
-    }
+
 
     return {
         email,
