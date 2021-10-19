@@ -3,7 +3,8 @@ import img from '../../../images/appointment.jpg'
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
-
+import useEmailAuth from '../../../hooks/useEmailAuth';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 
 
@@ -24,6 +25,9 @@ const LogIn = () => {
             })
 
     }
+
+    //login system for email password authentication
+
     return (
         <>
             <div className="register row mb-2 mt-2 w-75 g-4 mx-auto">
@@ -39,7 +43,7 @@ const LogIn = () => {
                                 <div>
                                     <p className="text-danger"></p>
                                 </div>
-                                <form >
+                                <form>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />

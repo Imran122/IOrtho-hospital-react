@@ -15,7 +15,8 @@
 }
 .btn-doctor {
   margin-left: 20px;
-  background-color: #064d3c;
+  background-color: #389781;
+  border: 1px solid #01d6a3;
 }
 .btn-doctor:hover {
   background-color: #01d6a3;

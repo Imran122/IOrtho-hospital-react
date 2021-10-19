@@ -2,44 +2,23 @@ import React, { useState } from 'react';
 import './Registration.css'
 import img from '../../../images/appointment.jpg'
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import initializeAuthentication from '../../../Firebase/firebase.initialize';
-import { Link } from 'react-router-dom';
+
 import { Button } from 'react-bootstrap';
+import useEmailAuth from '../../../hooks/useEmailAuth';
 
 
 initializeAuthentication()
 const Registration = () => {
-    const auth = getAuth();
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    //save data in user
-    const [user, setUser] = useState({})
-    //error hande for registration errors
-    const [error, setError] = useState('')
+    const {
+        handelNameChange,
+        error,
+        handelRegistration,
+        handelPasswordChange,
+        handelEmailChange,
+        toggleLogIn,
+        isLogIn, } = useEmailAuth()
 
-    const handelEmailChange = e => {
-        setEmail(e.target.value)
-    }
-    const handelPasswordChange = e => {
-        setPassword(e.target.value)
-    }
-
-    const handelRegistration = e => {
-        e.preventDefault();
-        if (password.length < 6) {
-            setError("Password must be 6 charecters")
-            return;
-        }
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                // Signed in 
-                setUser(result.user);
-
-            })
-
-
-    }
 
 
     return (
@@ -53,24 +32,31 @@ const Registration = () => {
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
-                                <h5 className="card-title">Register Here</h5>
+                                <h5 className="card-title">{isLogIn ? 'LogIn' : 'Register'} Here</h5>
                                 <div>
                                     <p className="text-danger">{error}</p>
                                 </div>
                                 <form onSubmit={handelRegistration}>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input onBlur={handelEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                                        <input onBlur={handelEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" required />
                                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                     </div>
+                                    {!isLogIn &&
+                                        <div className="mb-3">
+                                            <label htmlFor="exampleInputName" className="form-label">Name</label>
+                                            <input onBlur={handelNameChange} type="text" className="form-control" placeholder="Your name" id="examplename" aria-describedby="emailHelp" required />
+
+                                        </div>}
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                        <input onBlur={handelPasswordChange} type="password" className="form-control" id="exampleInputPassword1" required />
+                                        <input onBlur={handelPasswordChange} type="password" className="form-control" id="exampleInputPassword1" placeholder="password" required />
                                     </div>
                                     <div className="mb-3 form-check">
-                                        <p>Already have account?<Link to="/login">Login</Link></p>
+
+                                        <input type="checkbox" onChange={toggleLogIn} label="Check me out" /> Already Have Account?
                                     </div>
-                                    <button type="submit" className="btn btn-primary">SignUp</button>
+                                    <button type="submit" className="btn btn-primary">{isLogIn ? 'LogIn' : 'SignUp'}</button>
                                 </form>
                                 <div className="mb-3 mt-3 d-flex justify-content-end">
                                     <h6>SignIn By Google</h6>

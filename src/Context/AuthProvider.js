@@ -1,5 +1,6 @@
 import React, { createContext } from 'react';
 import useFirebase from '../hooks/useFirebase';
+import useEmailAuth from '../hooks/useEmailAuth';
 
 
 export const AuthContext = createContext();
@@ -7,6 +8,7 @@ export const AuthContext = createContext();
 const AuthProvider = (props) => {
     const { children } = props;
     const allContext = useFirebase();
+
     return (
         <AuthContext.Provider value={allContext}>
             {children}

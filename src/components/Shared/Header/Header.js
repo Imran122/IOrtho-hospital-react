@@ -73,7 +73,7 @@ const Header = () => {
                                             </div>
                                             <h6>{user.displayName}</h6>
 
-                                            <Button onClick={logout}>logOut</Button>
+                                            <Button variant="secondary" className="btn-doctor" onClick={logout}>logOut</Button>
 
                                         </div>
                                         :
