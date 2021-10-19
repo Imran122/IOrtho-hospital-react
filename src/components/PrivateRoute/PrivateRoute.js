@@ -7,7 +7,7 @@ import { Spinner } from 'react-bootstrap';
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();
     if (isLoading) {
-        <Spinner animation="border" variant="danger" />
+        return <Spinner animation="border" variant="danger" />
     }
     return (
 
