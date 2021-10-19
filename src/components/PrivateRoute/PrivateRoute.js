@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 //here using rest for store the rest data except children
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user } = useAuth();
+    const { user, isLoading } = useAuth();
     return (
 
         <Route
@@ -13,7 +13,7 @@ const PrivateRoute = ({ children, ...rest }) => {
             render={({ location }) => user.email ? children : <Redirect
 
                 to={{
-                    pathname: "/login",
+                    pathname: "/registration",
                     state: { from: location }
                 }}
 

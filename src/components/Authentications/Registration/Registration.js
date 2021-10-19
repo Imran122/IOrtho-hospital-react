@@ -6,6 +6,8 @@ import initializeAuthentication from '../../../Firebase/firebase.initialize';
 
 import { Button } from 'react-bootstrap';
 import useEmailAuth from '../../../hooks/useEmailAuth';
+import { useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 
 initializeAuthentication()
@@ -19,7 +21,26 @@ const Registration = () => {
         toggleLogIn,
         isLogIn, } = useEmailAuth()
 
+    //google sigin in code here
+    const { signUsingGoogle } = useAuth();
+    const location = useLocation();
 
+    //function for redirect to the location pages
+
+    const history = useHistory();
+    //if you are in login page directly then after login it will send home page other wise it will send that page where you came from
+    const redirect_uri = location.state?.from || './home'
+    const handelGoogleLogin = () => {
+
+        signUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri)
+                window.location.reload(redirect_uri)
+
+            })
+
+
+    }
 
     return (
         <>
@@ -60,7 +81,7 @@ const Registration = () => {
                                 </form>
                                 <div className="mb-3 mt-3 d-flex justify-content-end">
                                     <h6>SignIn By Google</h6>
-                                    <Button variant="success" className="register-button">
+                                    <Button onClick={handelGoogleLogin} variant="success" className="register-button">
                                         <img src="https://img.icons8.com/color/50/000000/google-logo.png" />
                                         Google
                                     </Button>

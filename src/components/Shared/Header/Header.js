@@ -4,12 +4,13 @@ import './Header.css'
 import img from '../../../images/logo/logo.png'
 import { NavLink, BrowserRouter as Router, } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import useEmailAuth from '../../../hooks/useEmailAuth';
 
 const Header = () => {
     //shoing loggedin user information
     const { user, logout } = useAuth();
 
-
+    const { isLogIn } = useEmailAuth()
 
 
     //style active nav 

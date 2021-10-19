@@ -7,8 +7,10 @@ const useFirebase = () => {
     const [error, setError] = useState('')
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
-
+    //loadin in private route
+    const [isLoading, setIsLoading] = useState(true)
     const signUsingGoogle = () => {
+        setIsLoading(true)
         //returning it for redirect to the location pagess
         return signInWithPopup(auth, googleProvider)
 
@@ -16,10 +18,12 @@ const useFirebase = () => {
 
     //logout for user
     const logout = () => {
+        setIsLoading(true)
         signOut(auth)
             .then(() => {
                 setUser({});
             })
+            .finally(() => setIsLoading(false))
     }
 
 
@@ -29,7 +33,10 @@ const useFirebase = () => {
             if (user) {
 
                 setUser(user)
+            } else {
+                setUser({})
             }
+            setIsLoading(false)
         })
     }, [])
 
@@ -37,7 +44,8 @@ const useFirebase = () => {
         user,
         error,
         logout,
-        signUsingGoogle
+        signUsingGoogle,
+        isLoading
     }
 }
 

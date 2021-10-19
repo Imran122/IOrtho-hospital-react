@@ -9,6 +9,19 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 
 const LogIn = () => {
+    //login system for email password authentication
+    const {
+
+        error,
+        handelRegistration,
+        handelPasswordChange,
+        handelEmailChange,
+        processLogin,
+        isLogIn, } = useEmailAuth()
+
+
+
+    //google sigin in code here
     const { signUsingGoogle } = useAuth();
     const location = useLocation();
 
@@ -26,7 +39,6 @@ const LogIn = () => {
 
     }
 
-    //login system for email password authentication
 
     return (
         <>
@@ -43,15 +55,18 @@ const LogIn = () => {
                                 <div>
                                     <p className="text-danger"></p>
                                 </div>
-                                <form>
+                                <div>
+                                    <p className="text-danger">{error}</p>
+                                </div>
+                                <form onSubmit={processLogin}>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                                        <input onBlur={handelEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                        <input type="password" className="form-control" id="exampleInputPassword1" required />
+                                        <input onBlur={handelPasswordChange} type="password" className="form-control" id="exampleInputPassword1" required />
                                     </div>
                                     <div className="mb-3 form-check">
                                         <p>Don't have account?<Link to="/registration">SignUp</Link></p>

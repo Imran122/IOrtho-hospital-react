@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.initialize';
+import { useLocation, useHistory } from 'react-router-dom';
+
 
 initializeAuthentication()
 const useEmailAuth = () => {
@@ -24,6 +26,7 @@ const useEmailAuth = () => {
     //for email type change function handeling
     const handelEmailChange = e => {
         setEmail(e.target.value)
+
     }
     const handelPasswordChange = e => {
         setPassword(e.target.value)
@@ -32,6 +35,10 @@ const useEmailAuth = () => {
     const handelNameChange = e => {
         setName(e.target.value)
     }
+    //load to the desire  pagess
+    const history = useHistory();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || './home'
 
     const handelRegistration = e => {
         e.preventDefault();
@@ -52,13 +59,15 @@ const useEmailAuth = () => {
 
     //login code here
     const processLogin = (email, password) => {
+
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
 
                 setError('');
-
+                history.push(redirect_uri)
+                location.reload();
             })
             .catch(error => {
                 setError(error.message);
@@ -67,25 +76,30 @@ const useEmailAuth = () => {
 
 
     //create new user
+
     const createNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
-                // Signed in 
+                // Signed up 
                 setUser(result.user);
                 setUserName();
                 console.log(result.user);
                 setError('');
+                history.push(redirect_uri)
+                location.reload();
 
             })
             .catch((err) => {
                 setError(err.message);
             })
+
     }
     //profile update code
     const setUserName = () => {
         updateProfile(auth.currentUser, { displayName: name })
             .then(result => { })
     }
+
     return {
         email,
         password,
@@ -96,7 +110,8 @@ const useEmailAuth = () => {
         handelEmailChange,
         toggleLogIn,
         isLogIn,
-        handelNameChange
+        handelNameChange,
+        processLogin
 
     }
 };
