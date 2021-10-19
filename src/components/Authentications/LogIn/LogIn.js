@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img from '../../../images/appointment.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
+
 
 
 
 const LogIn = () => {
-    const { signUsingGoogle } = useFirebase();
+    const { signUsingGoogle } = useAuth();
+    const location = useLocation();
 
+    //function for redirect to the location pages
+
+    const history = useHistory();
+    //if you are in login page directly then after login it will send home page other wise it will send that page where you came from
+    const redirect_uri = location.state?.from || './home'
+    const handelGoogleLogin = () => {
+        signUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri)
+
+            })
+
+    }
     return (
         <>
             <div className="register row mb-2 mt-2 w-75 g-4 mx-auto">
@@ -40,8 +55,8 @@ const LogIn = () => {
                                     <button type="submit" className="btn btn-primary">LogIn</button>
                                 </form>
                                 <div className="mb-3 mt-3 d-flex justify-content-end">
-                                    <h6>SignUp By Google</h6>
-                                    <Button onClick={signUsingGoogle} variant="success" className="register-button">
+                                    <h6>SignIn By Google</h6>
+                                    <Button onClick={handelGoogleLogin} variant="success" className="register-button">
                                         <img src="https://img.icons8.com/color/50/000000/google-logo.png" />
                                         Google
                                     </Button>

@@ -17,43 +17,50 @@ import Shop from './components/Shop/Shop';
 import NotFound from './components/NotFound/NotFound';
 import Registration from './components/Authentications/Registration/Registration';
 import LogIn from './components/Authentications/LogIn/LogIn';
+import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div>
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/ourservices">
-            <OurServices></OurServices>
-          </Route>
-          <Route exact path="/servicedetails/:serviceid">
-            <ServiceDetails></ServiceDetails>
-          </Route>
-          <Route path="/article">
-            <Article></Article>
-          </Route>
-          <Route path="/shop">
-            <Shop></Shop>
-          </Route>
-          <Route path="/registration">
-            <Registration></Registration>
-          </Route>
-          <Route path="/login">
-            <LogIn></LogIn>
-          </Route>
-          <Route exact={true} path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      {/* //here using auth provider to for all route.  */}
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/ourservices">
+              <OurServices></OurServices>
+            </Route>
+
+            <PrivateRoute exact path="/servicedetails/:serviceid">
+              <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+
+            <PrivateRoute path="/article">
+              <Article></Article>
+            </PrivateRoute>
+            <PrivateRoute path="/shop">
+              <Shop></Shop>
+            </PrivateRoute>
+            <Route path="/registration">
+              <Registration></Registration>
+            </Route>
+            <Route path="/login">
+              <LogIn></LogIn>
+            </Route>
+            <Route exact={true} path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

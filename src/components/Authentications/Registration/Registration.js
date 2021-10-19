@@ -73,7 +73,7 @@ const Registration = () => {
                                     <button type="submit" className="btn btn-primary">SignUp</button>
                                 </form>
                                 <div className="mb-3 mt-3 d-flex justify-content-end">
-                                    <h6>SignUp By Google</h6>
+                                    <h6>SignIn By Google</h6>
                                     <Button variant="success" className="register-button">
                                         <img src="https://img.icons8.com/color/50/000000/google-logo.png" />
                                         Google

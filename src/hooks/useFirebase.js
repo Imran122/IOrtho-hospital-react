@@ -9,14 +9,9 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
 
     const signUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                console.log(result.user);
-                setUser(result.user)
-            })
-            .catch(error => {
-                setError(error.message)
-            })
+        //returning it for redirect to the location pagess
+        return signInWithPopup(auth, googleProvider)
+
     }
 
     //logout for user
@@ -32,7 +27,7 @@ const useFirebase = () => {
     useEffect(() => {
         onAuthStateChanged(auth, user => {
             if (user) {
-                console.log("inside state change")
+
                 setUser(user)
             }
         })

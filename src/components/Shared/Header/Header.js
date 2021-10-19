@@ -3,10 +3,11 @@ import { Button, Col, Container, Form, FormControl, Nav, Navbar, NavDropdown, Ro
 import './Header.css'
 import img from '../../../images/logo/logo.png'
 import { NavLink, BrowserRouter as Router, } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
+
 const Header = () => {
     //shoing loggedin user information
-    const { user, logout } = useFirebase();
+    const { user, logout } = useAuth();
 
 
 
@@ -59,19 +60,28 @@ const Header = () => {
                                 </NavDropdown>
 
 
-                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/login">LogIn</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/registration">SignUp</NavLink></Nav.Link>
 
-                                {user?.email &&
-                                    <div className="log-data d-flex align-items-center mx-2">
-                                        <div>
-                                            <img className="login-img rounded-circle" width="50" height="50" src={user.photoURL} alt="" />
+
+                                {
+                                    user.email ?
+
+
+                                        <div className="log-data d-flex align-items-center mx-2">
+                                            <div>
+                                                <img className="login-img rounded-circle" width="50" height="50" src={user.photoURL} alt="" />
+
+                                            </div>
+                                            <h6>{user.displayName}</h6>
+
+                                            <Button onClick={logout}>logOut</Button>
 
                                         </div>
-                                        <h6>{user.displayName}</h6>
-
-                                        <Button onClick={logout}>logOut</Button>
-                                    </div>}
+                                        :
+                                        <>
+                                            <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/login">LogIn</NavLink></Nav.Link>
+                                            <Nav.Link> <NavLink className="navbar-list" activeStyle={activeStyle} to="/registration">SignUp</NavLink></Nav.Link>
+                                        </>
+                                }
 
 
 
