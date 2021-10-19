@@ -22,7 +22,7 @@ const Registration = () => {
         isLogIn, } = useEmailAuth()
 
     //google sigin in code here
-    const { signUsingGoogle } = useAuth();
+    const { signUsingGoogle, setIsLoading, user, setUser } = useAuth();
     const location = useLocation();
 
     //function for redirect to the location pages
@@ -34,10 +34,11 @@ const Registration = () => {
 
         signUsingGoogle()
             .then(result => {
+                setUser(result.user)
                 history.push(redirect_uri)
 
 
-            })
+            }).finally(() => setIsLoading(false))
 
 
     }

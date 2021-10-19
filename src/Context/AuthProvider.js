@@ -7,6 +7,7 @@ export const AuthContext = createContext();
 //this context will use for authorization.it sending value by allcontext
 const AuthProvider = (props) => {
     const { children } = props;
+    //call usefirebase to store data in allcontext
     const allContext = useFirebase();
 
     return (
