@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import './Appointment.css'
+import './Patient.css'
 import img from '../../../images/patient.jpg'
-const Appointment = () => {
+const Patient = () => {
     return (
         <div>
             <div className="patients-feedback">
@@ -25,4 +25,7 @@ const Appointment = () => {
     );
 };
 
-export default Appointment;
+export default Patient;
+
+
+
